@@ -7,7 +7,7 @@ body {
 
   h1 {
     text-align: center;
-    background-color: lightgray;
+    color: #333;
     width: 100%;
     height: 30%;
   }
@@ -58,13 +58,15 @@ body {
   }
 
   .hero-section {
-    background: url('path/to/studio-ghibli-logo.jpg') center/cover no-repeat; /* Replace with actual image URL */
     height: 400px; /* Adjust the height as needed */
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff; /* White text color for hero content */
     text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #ddd;
   }
 
   .hero-section h1 {
@@ -78,3 +80,9 @@ body {
     margin: 0 auto;
   }
 
+  
+
+.gbl{
+  display: flex;
+  justify-content: space-between;
+}

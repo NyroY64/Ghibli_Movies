@@ -47,22 +47,38 @@ const apiUrl ='https://ghibliapi.vercel.app/films';
       movieImage.alt = movie.title;
   
       const movieProd=document.createElement('div');
-      movieProd.textContent=movie.producer;
+      movieProd.textContent=movie.director;
   
   
       const movieTitle = document.createElement('div');
       movieTitle.className = 'movieTitle';
       movieTitle.textContent = movie.title;
       movieTitle.style.textAlign="left";
+
+      const originTitle =document.createElement('div');
+      originTitle.textContent=movie.original_title;
+      movieTitle.style.margin="0px 0px 0px 50px";
   
       
       const detailButton = document.createElement('button');
       detailButton.textContent='VIEW'
+      detailButton.addEventListener(onclick,(e)=>{
+        document.querySelector(".popup").style.display = "block";
+        console.log('hello');
+      })
+
+
+      const containerBTN=document.createElement('div');
+      containerBTN.className='gbl';
+
+      
 
       movieCard.appendChild(movieImage);
       movieCard.appendChild(movieTitle);
       movieCard.appendChild(movieProd);
-      movieCard.appendChild(detailButton);
+      containerBTN.appendChild(detailButton);
+      containerBTN.appendChild(originTitle);
+      movieCard.appendChild(containerBTN);
       movieListContainer.appendChild(movieCard);
 
       
